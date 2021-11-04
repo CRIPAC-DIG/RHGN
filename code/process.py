@@ -7,7 +7,7 @@ import torch
 from torch import nn
 from utils import *
 from utils import neighbormap,split_char,filter_sample,combination
-from parser import get_args
+from homo_parser import get_args
 
 import fasttext
 np.random.seed(20)
