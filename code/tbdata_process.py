@@ -7,7 +7,7 @@ import torch
 from torch import nn
 from utils import *
 from utils import neighbormap,split_char,filter_sample,combination
-from parser import get_args
+from homo_parser import get_args
 
 import fasttext
 np.random.seed(20)
@@ -114,14 +114,10 @@ class dataloader():
         G.nodes['item'].data['cid1'] = torch.tensor(self.c1[:G.number_of_nodes('item')])
         G.nodes['item'].data['cid2'] = torch.tensor(self.c2[:G.number_of_nodes('item')])
         G.nodes['item'].data['cid3'] = torch.tensor(self.c3[:G.number_of_nodes('item')])
-        print(G.nodes['item'].data['cid1'].shape,)
-        print(G.nodes['item'].data['cid2'].shape)
-        print(G.nodes['item'].data['cid3'].shape)
         print(G)
         print(cid1_feature.shape,)
         print(cid2_feature.shape,)
         print(cid3_feature.shape,)
-        exit()
         if is_save == True:
             torch.save(G, '{}/G_ori.pkl'.format(self.data_dir))
             torch.save(cid1_feature, '{}/cid1_feature.npy'.format(self.data_dir))

@@ -13,7 +13,7 @@ import fasttext
 np.random.seed(20)
 args=get_args()
 
-
+args.data_dir='../data/'
 
 class dataloader():
     def __init__(self,data_dir=None,):
