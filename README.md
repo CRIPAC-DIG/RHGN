@@ -21,7 +21,6 @@ Processed data download link: [Dataset](https://drive.google.com/drive/folders/1
 python tb_tmain.py --data_dir ../taobao_data/ --model RHGN --label gender --graph G_ori --gpu 3  # Alibaba-Dataset
 
 python jd_tmain.py --data_dir ../data/ --model RHGN --graph G_ori  --label age --gpu 2  # JD-Dataset
-
 ```
 ### 2、Process raw data
 ```
@@ -31,5 +30,4 @@ python jddata_process.py     #JD-Dataset
 ```
 More command can refer  **run.sh** and **baseline.sh**
 # Contact
-qilong.yan@cripac.ia.ac.cn
-
+qilongy@foxmail.com
