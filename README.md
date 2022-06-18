@@ -8,7 +8,7 @@ scikit-learn==0.23.2 <br>
 numpy==1.19.1 <br>
 scipy ==1.5.2 <br>
 pandas==1.1.2 <br> <br>
-Note: The code require your gpu memory not less than 20 GB. <br>
+#### Note: The code require your gpu memory not less than 20 GB. <br>
 # Dataset
 
 Processed data download link: [Dataset](https://drive.google.com/drive/folders/1K0tRyHOOB63PnXtFtwLU5eM2NbRTiKXG?usp=sharing)<br>
