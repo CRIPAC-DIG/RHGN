@@ -64,13 +64,10 @@ class tb_RHGN(nn.Module):
         item_cid3=blocks[0].srcnodes['item'].data['cid3'].unsqueeze(1)        #(N,1)
         cid3_feature = self.cid3_feature(item_cid3)     #       #(N,1,200)
  
-        
-        cid2_feature=cid1_feature
-        cid3_feature=cid1_feature
          
         item_feature = blocks[0].srcnodes['item'].data['inp']
         user_feature = blocks[0].srcnodes['user'].data['inp']
-        brand_feature = blocks[0].srcnodes['brand'].data['inp']
+        #brand_feature = blocks[0].srcnodes['brand'].data['inp']
 
         inputs=torch.cat((cid1_feature,cid2_feature,cid3_feature),1)        #(N,4,200)
         k = self.key(inputs) #(N,4,n_inp)
@@ -88,7 +85,7 @@ class tb_RHGN(nn.Module):
         h = {}
         h['item']=F.gelu(self.adapt_ws[self.node_dict['item']](item_feature))
         h['user']=F.gelu(self.adapt_ws[self.node_dict['user']](user_feature))
-        h['brand']=F.gelu(self.adapt_ws[self.node_dict['brand']](brand_feature))
+        #h['brand']=F.gelu(self.adapt_ws[self.node_dict['brand']](brand_feature))
 
         for i in range(self.n_layers):
             h = self.gcs[i](blocks[i], h, is_train=is_train,print_flag=print_flag)
