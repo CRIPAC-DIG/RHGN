@@ -76,9 +76,9 @@ class dataloader():
         import pickle
         u={v:k for k,v in self.user_dic.items()}
         i={v:k for k,v in self.item_dic.items()}
-        pickle.dump(u,open('{}/attweight/user_dic.pkl'.format(args.data_dir),'wb'))
-        pickle.dump(i,open('{}/attweight/item_dic.pkl'.format(args.data_dir),'wb'))
-        exit()
+        #pickle.dump(u,open('{}/attweight/user_dic.pkl'.format(args.data_dir),'wb'))
+        #pickle.dump(i,open('{}/attweight/item_dic.pkl'.format(args.data_dir),'wb'))
+        
         click_user = [self.user_dic[user] for user in self.df_click.user_id]
         click_item = [self.item_dic[item] for item in self.df_click.item_id]
         purchase_user = [self.user_dic[user] for user in self.df_order.user_id]
