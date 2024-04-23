@@ -24,20 +24,20 @@ More command can refer  **run.sh** and **baseline.sh**
 
 ## Requirements
 
-torch==1.6.0 <br>
-torchvision==0.7.0 <br>
-dgl==0.7.1 <br>
-scikit-learn==0.23.2 <br>
-numpy==1.19.1 <br>
-scipy ==1.5.2 <br>
-pandas==1.1.2 <br> <br>
+- torch==1.6.0 <br>
+- torchvision==0.7.0 <br>
+- dgl==0.7.1 <br>
+- scikit-learn==0.23.2 <br>
+- numpy==1.19.1 <br>
+- scipy ==1.5.2 <br>
+- pandas==1.1.2 <br> <br>
 ##### Note: The code require your gpu memory not less than 20 GB. <br>
 
 ## Citation
 
 Please cite our paper if you use the code:
 
-'''
+```
 @inproceedings{yan2021relation,
   title={Relation-aware heterogeneous graph for user profiling},
   author={Yan, Qilong and Zhang, Yufeng and Liu, Qiang and Wu, Shu and Wang, Liang},
@@ -45,7 +45,7 @@ Please cite our paper if you use the code:
   pages={3573--3577},
   year={2021}
 }
-'''
+```
 
 ## Contact
 qilongy@foxmail.com
